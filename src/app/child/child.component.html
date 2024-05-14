@@ -1,0 +1,15 @@
+<ng-container *ngIf="apiData">
+    <ng-container *ngIf="apiData.details; let details;">
+        <!-- <div>{{ detail | json }}</div> -->
+        <ng-container *ngFor="let detail of details;">
+            <div style="margin-left: 20px">{{ detail.mst_cat_name }}</div>
+            <ng-container *ngFor="let product_detail of detail.product_details">
+                <div style="margin-left: 35px">{{ product_detail.mst_product_name }}</div>
+                <mat-checkbox style="margin-left: 35px" [(ngModel)]="product_detail.isCheckboxCheck">Required</mat-checkbox>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</ng-container>
+
+
+<button mat-button (click)="submit()"> Submit Selected</button>

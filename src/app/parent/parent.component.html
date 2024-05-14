@@ -1,0 +1,20 @@
+<form [formGroup]="formGroupTest">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Product Id</mat-label>
+        <input matInput placeholder="Product Id" formControlName="device_id">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Branch Id</mat-label>
+        <input matInput placeholder="Branch Id" formControlName="branch_id">
+    </mat-form-field>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" formControlName="is_for_repeat_set_combo" [disabled]="false">is_for_repeat_set_combo</mat-checkbox>
+    </section>
+
+    <button mat-button (click)="submit()">Submit</button>
+
+</form>
+
+    <app-child></app-child>
